@@ -1,0 +1,13 @@
+# sauvegarde de la base tous les jours à 2h00 du matin
+0 2 * * * /home/pgadmin/backup.sh
+# ----------------------------------------
+# commande touch toutes les minutes
+#*/1 * * * * touch /mnt/backup/movies/test.txt
+# ----------------------------------------
+# commande touch à 15h07 et 15h38 tous les jours
+7,38 15 * * * touch /mnt/backup/movies/test.txt
+# ----------------------------------------
+# commande touch à 1H00 du lundi au vendredi
+# lundi-dimanche : 1-7
+# pour les anglais dimanche-samedi : 0-6
+#0 1 * * 1-5 touch /mnt/backup/movies/test.txt

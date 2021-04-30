@@ -1,0 +1,13 @@
+Objectif: installer un serveur de base de données PostgreSQL dans un répertoire dédié
+
+Ecrire un script prenant en paramètres:
+-b path-pg-binaries : repértoire des scripts/executables de postgresql
+-s servicename : unité de service du futur serveur de bdd postgresql
+-D path-data-server : répertoire PGDATA du futur serveur
+[ -s0 servicename ] : (optionnel) unité de service à copier en modèle
+[ -p port ] : (optionnel) port d'écoute du serveur postgresql
+
+Exemples d'appel:
+install-pg.sh -b /usr/pgsql-13/bin -s postgresql-movies -D /mnt/datamovies/pgdata
+install-pg.sh -b /usr/pgsql-13/bin -s postgresql-movies -D /mnt/datamovies/pgdata -s0 postgresql-13 -p 5433
+
